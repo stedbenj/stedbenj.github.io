@@ -31,6 +31,10 @@
 .img {
   object-fit: cover;
   max-width: 100%;
+  backdrop-filter: blur(0px);
+  filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 79px;
 }
 .img > picture > img {
   object-fit: cover;
