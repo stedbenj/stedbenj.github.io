@@ -40,7 +40,7 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "./plasmic_gmt.module.css"; // plasmic-import: pzVTj3KyqzBKHuv92fMSee/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: -NwcXZN-prfa/css
 
-import fakeMenupngZAhmxzif from "./images/fakeMenupng.png"; // plasmic-import: z_AHMXZIF/picture
+import ghostAvatarCenteredpngPtPzhBvC from "./images/ghostAvatarCenteredpng.png"; // plasmic-import: PTPzh_BvC/picture
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -124,17 +124,21 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.img}
                 alt={""}
                 className={classNames(sty.img)}
-                displayHeight={"auto" as const}
+                displayHeight={
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? ("742px" as const)
+                    : ("1010px" as const)
+                }
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"100%" as const}
                 displayMinHeight={"0" as const}
                 displayMinWidth={"0" as const}
-                displayWidth={"auto" as const}
+                displayWidth={"1440px" as const}
                 loading={"lazy" as const}
                 src={{
-                  src: fakeMenupngZAhmxzif,
-                  fullWidth: 335,
-                  fullHeight: 1024,
+                  src: ghostAvatarCenteredpngPtPzhBvC,
+                  fullWidth: 400,
+                  fullHeight: 400,
                   aspectRatio: undefined
                 }}
               />
